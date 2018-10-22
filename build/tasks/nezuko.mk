@@ -38,6 +38,7 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 nezuko: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(NEZUKO_TARGET_PACKAGE)
 	$(hide) $(MD5) $(NEZUKO_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(NEZUKO_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/nezuko/tools/generate_json_build_info.sh $(NEZUKO_TARGET_PACKAGE)
 	@echo -e ""
 	@echo -e "${cya}Building ${bldcya}Nezuko ! ${txtrst}";
 	@echo -e ""
