@@ -27,8 +27,8 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/nezuko/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/nezuko/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/nezuko/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/nezuko/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/nezuko/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
 
 # Font service Permissions
