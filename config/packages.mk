@@ -1,12 +1,18 @@
 # Nezuko packages
 PRODUCT_PACKAGES += \
     NezukoSetupWizard \
-    Updater \
     Terminal \
     ThemePicker \
     NezukoThemesStub \
     QuickAccessWallet
     
+
+ifeq ($(NEZUKO_BUILD_TYPE), OFFICIAL)
+    PRODUCT_PACKAGES += \
+        Updater
+endif
+
+
 # Extra tools in Nezuko
 PRODUCT_PACKAGES += \
     7z \
