@@ -18,3 +18,4 @@ ADDITIONAL_BUILD_PROPERTIES += \
   ro.nezuko.fingerprint=$(NEZUKO_FINGERPRINT) \
   ro.nezuko.device=$(NEZUKO_BUILD) \
   org.nezuko.version=$(NEZUKOVERSION)
+  ro.nezuko.build.version=$(NEZUKOVERSION)
